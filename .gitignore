@@ -27,3 +27,6 @@ bin/
 .settings/
 .classpath
 .project
+.factorypath
+.vscode/
+workspace.*

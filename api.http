@@ -1,0 +1,19 @@
+########################################
+# LIMITS-SERVICE
+########################################
+
+### @name getLimits
+GET /limits HTTP/1.1
+Host: localhost:8080
+
+########################################
+# CURRENCY-EXCHANGES-SERVICE
+########################################
+
+### @name retrieveExchangeValue
+GET /currency-exchanges/from/USD/to/IND HTTP/1.1
+Host: localhost:8000
+
+### @name retrieveExchangeValueNegative
+GET /currency-exchanges/from/FRN/to/IRL HTTP/1.1
+Host: localhost:8000
