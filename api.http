@@ -14,6 +14,27 @@ Host: localhost:8080
 GET /currency-exchanges/from/USD/to/IND HTTP/1.1
 Host: localhost:8000
 
+### @name retrieveExchangeValue8001
+GET /currency-exchanges/from/USD/to/IND HTTP/1.1
+Host: localhost:8001
+
 ### @name retrieveExchangeValueNegative
 GET /currency-exchanges/from/FRN/to/IRL HTTP/1.1
 Host: localhost:8000
+
+########################################
+# CURRENCY-CONVERSIONS-SERVICE
+########################################
+
+### @name 
+GET /curreny-converter/from/USD/to/IND/quantity/1000 HTTP/1.1
+Host: localhost:8100
+
+
+########################################
+# SPRING-CLOUD-CONFIG-SERVER
+########################################
+
+### @name getLimitsServiceConfig
+GET /limits-service/default HTTP/1.1
+Host: localhost:8888
