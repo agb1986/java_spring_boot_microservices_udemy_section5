@@ -1,22 +1,20 @@
-package com.agb1986.microservices.currencyexchangesservice;
+package com.agb1986.microservices.zuulserver;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import brave.sampler.Sampler;
 
-@SpringBootApplication
-@EnableJpaRepositories
-@EnableAutoConfiguration
+@EnableZuulProxy
 @EnableDiscoveryClient
-public class CurrencyExchangesServiceApplication {
+@SpringBootApplication
+public class ZuulServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CurrencyExchangesServiceApplication.class, args);
+		SpringApplication.run(ZuulServerApplication.class, args);
 	}
 
 	@Bean

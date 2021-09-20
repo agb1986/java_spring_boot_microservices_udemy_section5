@@ -1,0 +1,23 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.9-management
+    ports: 
+      - 5672:5672
+      - 15672:15672
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:15672"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
+  zipkin:
+    image: openzipkin/zipkin
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+    ports: 
+      - 9411:9411
+    environment: 
+      - RABBIT_URI=amqp://localhost
+    links: 
+      - rabbitmq
+    
