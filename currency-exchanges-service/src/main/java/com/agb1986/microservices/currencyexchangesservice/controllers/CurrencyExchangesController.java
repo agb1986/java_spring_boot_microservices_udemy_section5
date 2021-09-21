@@ -1,7 +1,5 @@
 package com.agb1986.microservices.currencyexchangesservice.controllers;
 
-import java.math.BigDecimal;
-
 import com.agb1986.microservices.currencyexchangesservice.beans.ExchangeValue;
 import com.agb1986.microservices.currencyexchangesservice.repository.ExchangeValueRepository;
 
@@ -22,7 +20,6 @@ public class CurrencyExchangesController {
 
     @Autowired
     private ExchangeValueRepository repository;
-
 
     @GetMapping(path = "/currency-exchanges/from/{from}/to/{to}")
     public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {

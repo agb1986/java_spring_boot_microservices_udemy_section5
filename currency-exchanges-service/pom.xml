@@ -9,7 +9,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.agb1986.microservices</groupId>
-	<artifactId>currency-exchange-service</artifactId>
+	<artifactId>currency-exchanges-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>currency-exchange-service</name>
 	<description>Microservice for Currency Conversion Service</description>
